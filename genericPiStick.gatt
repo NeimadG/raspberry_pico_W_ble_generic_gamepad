@@ -1,0 +1,16 @@
+PRIMARY_SERVICE, GAP_SERVICE
+CHARACTERISTIC, GAP_DEVICE_NAME, READ, "GenericPIStick"
+// GAP Appearance gamepad = 0x03C3
+CHARACTERISTIC, GAP_APPEARANCE, READ, C3 03
+
+// add Battery Service
+#import <battery_service.gatt>
+
+// add Device ID Service
+#import <device_information_service.gatt>
+
+// add HID Service
+#import <hids.gatt>
+
+PRIMARY_SERVICE, GATT_SERVICE
+CHARACTERISTIC, GATT_DATABASE_HASH, READ,
