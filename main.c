@@ -28,14 +28,6 @@ int main() {
     if (cyw43_arch_init() != PICO_OK) {
         panic("failed to cyw43");
     }
-    
-    // while (!stdio_usb_connected() && get_absolute_time() < 5000000)
-    // { // blink the pico's led until usb connection is established
-    //     hal_led_toggle();
-    //     sleep_ms(250);
-    //     hal_led_toggle();
-    //     sleep_ms(250);
-    // }
 
     initMem();
     adc_init();
